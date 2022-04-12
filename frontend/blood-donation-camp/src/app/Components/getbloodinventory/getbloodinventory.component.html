@@ -1,0 +1,17 @@
+<div>
+  <table border='1' style="width:50%">
+      <tr>
+          <th>BloodBankID</th>
+          <th>BloodGroup</th>
+          <th>Number of bottles</th>
+
+      </tr>
+      <tr *ngFor="let item of blooddonordonations">
+          <td>{{item.bloodBankID}}</td>
+          <td>{{item.bloodGroup}}</td>
+          <td>{{item.numberofBottles}}</td>
+
+      </tr>
+
+  </table>
+</div>

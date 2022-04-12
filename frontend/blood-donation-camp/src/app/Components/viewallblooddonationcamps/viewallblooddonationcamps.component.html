@@ -1,0 +1,22 @@
+<div>
+  <table border="1" style="width:90%">
+    <tr>
+      <th>Blood Donation Camp ID</th>
+      <th>Camp Name</th>
+      <th>Adress</th>
+      <th>City</th>
+      <th>Blood Bank ID</th>
+      <th>Camp Start Date</th>
+      <th>Camp End Date</th>
+    </tr>
+    <tr *ngFor="let item of blooddonationcamps">
+      <td>{{item.bloodDonationCampID}}</td>
+      <td>{{item.campName}}</td>
+      <td>{{item.adress}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.bloodBankID}}</td>
+      <td>{{item.campStartDate}}</td>
+      <td>{{item.campEndDate}}</td>
+    </tr>
+  </table>
+</div>
