@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\reviewbloodbank\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj": {}
+    "D:\\reviewbloodbank\\backend\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj": {}
   },
   "projects": {
-    "D:\\reviewbloodbank\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj": {
+    "D:\\reviewbloodbank\\backend\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\reviewbloodbank\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj",
+        "projectUniqueName": "D:\\reviewbloodbank\\backend\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj",
         "projectName": "BloodBankManagementSystem",
-        "projectPath": "D:\\reviewbloodbank\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj",
+        "projectPath": "D:\\reviewbloodbank\\backend\\BloodBankManagementSystem\\BloodBankManagementSystem.csproj",
         "packagesPath": "C:\\Users\\dheer\\.nuget\\packages\\",
-        "outputPath": "D:\\reviewbloodbank\\BloodBankManagementSystem\\obj\\",
+        "outputPath": "D:\\reviewbloodbank\\backend\\BloodBankManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dheer\\AppData\\Roaming\\NuGet\\NuGet.Config",

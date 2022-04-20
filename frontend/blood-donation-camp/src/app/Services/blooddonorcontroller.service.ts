@@ -42,4 +42,8 @@ export class BlooddonorcontrollerService {
   SearchBlood(bloodGroup:string,bloodBankID:number):Observable<number>{
     return this.http.get<number>(this.blood_donor_api+'SearchBlood/'+bloodGroup+'/'+bloodBankID);
   }
+  DeleteExpiredBlood(id:number):Observable<any>
+  {
+    return this.http.delete(this.blood_donor_api+'DeleteExpiredBlood/'+id);
+  }
 }

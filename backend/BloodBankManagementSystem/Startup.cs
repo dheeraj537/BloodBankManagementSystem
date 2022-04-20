@@ -34,6 +34,7 @@ namespace BloodBankManagementSystem
             services.AddDbContext<MainContext>(item => item.UseSqlServer(Configuration.GetConnectionString("MyDBConn")));
             services.AddScoped<IBloodDonationCamp, BloodDonationCampRepo>();
             services.AddScoped<IBloodDonorRepository, BloodDonorRepository>();
+            services.AddScoped<IAdminLogin, AdminLoginRepository>();
             
             services.AddScoped<IHospitalRepository, HospitalRepository>();
             services.AddScoped<IBloodBankRepository, BloodBankRepository>();

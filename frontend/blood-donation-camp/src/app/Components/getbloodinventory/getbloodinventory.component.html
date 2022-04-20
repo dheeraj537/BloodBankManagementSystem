@@ -4,14 +4,24 @@
           <th>BloodBankID</th>
           <th>BloodGroup</th>
           <th>Number of bottles</th>
+          <th> blood donation date</th>
+          <th> expiry date</th>
 
       </tr>
       <tr *ngFor="let item of blooddonordonations">
           <td>{{item.bloodBankID}}</td>
           <td>{{item.bloodGroup}}</td>
           <td>{{item.numberofBottles}}</td>
+          <td>{{item.bloodDonationDate}}</td>
+          <td>{{result1}}</td>
+          <td><button (click)="DeleteExpiredBlood(item.bloodDonationID)">Delete</button></td>
+
+
+
 
       </tr>
 
+
   </table>
+  <button><a routerLink="/blooddonormenu">back</a></button>
 </div>

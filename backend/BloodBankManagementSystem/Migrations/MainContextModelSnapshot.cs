@@ -19,6 +19,22 @@ namespace BloodBankManagementSystem.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("BloodBankManagementSystem.Entities.Admin", b =>
+                {
+                    b.Property<string>("AdminID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AdminPassword")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminID");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("BloodBankManagementSystem.Entities.BloodBank", b =>
                 {
                     b.Property<int>("BloodBankID")
@@ -131,6 +147,9 @@ namespace BloodBankManagementSystem.Migrations
 
                     b.Property<string>("BloodGroup")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("HBCount")
                         .HasColumnType("int");

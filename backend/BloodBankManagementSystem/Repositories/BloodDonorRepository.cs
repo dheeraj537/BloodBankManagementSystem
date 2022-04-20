@@ -89,5 +89,12 @@ namespace BloodBankManagementSystem.Repositories
 
             throw new NotImplementedException();
         }
+
+        public void DeleteExpiredBlood(int BloodDonationID)
+        {
+            BloodDonorDonation bloodDonorDonation = _context.BloodDonorDonations.Find(BloodDonationID);
+            _context.BloodDonorDonations.Remove(bloodDonorDonation);
+            _context.SaveChanges();
+        }
     }
 }

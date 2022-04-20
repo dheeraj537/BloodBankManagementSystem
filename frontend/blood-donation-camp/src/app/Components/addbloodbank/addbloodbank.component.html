@@ -1,10 +1,7 @@
 <header> <h1>Add Blood Bank Details</h1> </header>
 <div>
   <table>
-    <tr>
-      <td id="textele">Blood Bank Id:</td>
-      <td><input type="text" name="" id="" [(ngModel)]="bloodbank.bloodBankID"></td>
-    </tr>
+
     <tr>
       <td id="textele">User Id</td>
       <td><input type="number" name="" id="" [(ngModel)]="bloodbank.userID"></td>
@@ -33,6 +30,7 @@
       <td colspan="2">
         <button  id="btn" (click)="AddBloodBank()">Add</button>
 </td>
+<td><button><a routerLink="/bloodbankmenu">back</a></button></td>
     </tr>
   </table>
 </div>

@@ -12,11 +12,11 @@
             <p>Please enter your credentials to login.</p>
           </div>
         </div>
-        <form class="login-form">
-          <input type="text" name="" id="" placeholder="username" [(ngModel)]="user.userName">
-          <input type="text" name="" id=""  placeholder="password" [(ngModel)]="user.password">
-          <button ><a routerLink="/homepage">login</a></button>
-        </form>
+
+          <input type="text"  placeholder="username" [(ngModel)]="admin.adminID">
+          <input type="password"  placeholder="password" [(ngModel)]="admin.adminPassword">
+          <button (click)="Validate()">login</button>
+
       </div>
     </div>
     <span>{{errMsg}}</span>

@@ -3,10 +3,7 @@
 
 <div>
   <table>
-    <tr>
-      <td id="hid">HospitalID</td>
-      <td><input type="number" name="hid1" id="hid1" [(ngModel)]="hospital.hospitalID"></td>
-    </tr>
+
     <br>
     <tr>
       <td id="hn">HospitalName</td>
@@ -32,7 +29,9 @@
       <td colspan="2">
         <button id="btn" (click)="AddHospitalDetails()">Add</button>
       </td>
+      <td><button><a routerLink="/hospitalmenu">back</a></button></td>
     </tr>
+
   </table>
 </div>
 

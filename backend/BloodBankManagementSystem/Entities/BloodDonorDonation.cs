@@ -23,6 +23,19 @@ namespace BloodBankManagementSystem.Entities
         public string BloodGroup { get;set; }
         [ForeignKey("BloodBank")]
         public int BloodBankID { get; set; }
+        public DateTime ExpiryDate
+        {
+            get
+            {
+                return BloodDonationDate;
+            }
+            set
+            {
+
+                BloodDonationDate = this.BloodDonationDate.AddDays(100);
+            }
+
+        }
 
         
     }

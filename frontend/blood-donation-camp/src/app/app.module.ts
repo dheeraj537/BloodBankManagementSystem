@@ -79,6 +79,7 @@ import { LogoutComponent } from './Components/logout/logout.component';
     CommonModule
 
 
+
   ],
   providers: [BlooddonationcampService,HospitalControllerService,BloodbankserviceService,BlooddonorcontrollerService],
   bootstrap: [AppComponent]

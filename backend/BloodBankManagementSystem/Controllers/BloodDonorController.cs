@@ -99,6 +99,21 @@ namespace BloodBankManagementSystem.Controllers
             List<BloodDonorDonation> bloodDonorDonations = _repository.GetBloodInventory();
             return Ok(bloodDonorDonations);
         }
+        [HttpDelete]
+        [Route("DeleteExpiredBlood/{BloodDonationID}")]
+        public IActionResult DeleteExpiredBlood(int BloodDonationID)
+        {
+            try
+            {
+                _repository.DeleteExpiredBlood(BloodDonationID);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+        }
 
 
     }

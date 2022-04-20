@@ -4,17 +4,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace BloodBankManagementSystem.Entities
 {
     [Table("BloodBanks")]
+   
     public class BloodBank
     {
         [Key]
         public int BloodBankID { get; set; }
-        [Required]
+       
+        
         public int UserID { get; set; }
+
         public int Password { get; set; }
         public string BloodBankName { get; set; }
       
