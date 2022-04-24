@@ -20,6 +20,9 @@ namespace BloodBankManagementSystem.Repositories
         List<BloodDonorDonation> GetBloodInventory();
         int SearchBlood(string BloodGroup,int BloodBankID);
         void DeleteExpiredBlood(int BloodDonationID);
+        List<ViewBloodAvailable> ViewBloodAvailable();
+       
+        void transfer(int BloodBankID, string BloodGroup,int ToBloodBankID, int NumberOfBottles);
 
     }
 }

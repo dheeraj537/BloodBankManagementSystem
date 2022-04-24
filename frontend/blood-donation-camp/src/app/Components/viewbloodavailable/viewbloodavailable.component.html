@@ -1,0 +1,30 @@
+<div>
+  <table border='1' style="width:50%">
+      <tr>
+          <th>BloodBankID</th>
+          <th>BloodGroup</th>
+          <th>Number of bottles</th>
+
+
+      </tr>
+      <tr *ngFor="let item of bloodsavailable">
+          <td>{{item.bloodBankID}}</td>
+          <td>{{item.bloodGroup}}</td>
+          <td>{{item.numberOfBottles}}</td>
+          <td><input type="number" name="" id="" [(ngModel)]="item.tobloodBankID"></td>
+          <td><input type="number" name="" id="" [(ngModel)]="item.numberOfBottlesToSend"></td>
+          <td><button (click)="transferblood(item.bloodBankID,item.bloodGroup)">transfer</button></td>
+          <td>{{op}}</td>
+
+
+
+
+     </tr>
+
+
+  </table>
+
+
+  <button><a routerLink="/blooddonormenu">back</a></button>
+
+</div>

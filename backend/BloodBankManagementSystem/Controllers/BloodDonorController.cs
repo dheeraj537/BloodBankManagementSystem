@@ -114,6 +114,27 @@ namespace BloodBankManagementSystem.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet]
+        [Route("ViewBloodAvailable")]
+        public IActionResult ViewBloodAvailable()
+        {
+            List<ViewBloodAvailable> viewBloods = _repository.ViewBloodAvailable();
+            return Ok(viewBloods);
+        }
+        [HttpGet]
+        [Route("transferblood/{bloodBankID}/{BloodGroup}/{tobloodBankID}/{numberOfBottlesToSend}")]
+        public IActionResult transferblood(int bloodBankID,string BloodGroup,int tobloodBankID,int numberOfBottlesToSend)
+        {
+            try
+            {
+                _repository.transfer(bloodBankID,BloodGroup,tobloodBankID,numberOfBottlesToSend);
+                return Ok("Tranfer completed");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
 
     }

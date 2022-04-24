@@ -23,15 +23,18 @@ import { AddblooddonordonationComponent } from './Components/addblooddonordonati
 import { GetblooddonordetailsComponent } from './Components/getblooddonordetails/getblooddonordetails.component';
 import { BlooddonormenuComponent } from './Components/blooddonormenu/blooddonormenu.component';
 import { GetbloodinventoryComponent } from './Components/getbloodinventory/getbloodinventory.component';
-import { TransferbloodComponent } from './Components/transferblood/transferblood.component';
+
 import { SearchbloodComponent } from './Components/searchblood/searchblood.component';
+
+import { ViewbloodavailableComponent } from './Components/viewbloodavailable/viewbloodavailable.component';
 
 //defining routes to the components
 const routes: Routes = [
   {path:'viewbloodinventory',component:GetbloodinventoryComponent},
-  {path:'transferblood',component:TransferbloodComponent},
+  
   {path:'addblooddonordonation',component:AddblooddonordonationComponent},
   {path:'searchblood',component:SearchbloodComponent},
+  {path:'bloodavailable',component:ViewbloodavailableComponent},
 
   {path:'updateblooddonordetails',component:UpdateblooddonordetailsComponent},
   {path:'addblooddonordetails',component:AddblooddonordetailsComponent},

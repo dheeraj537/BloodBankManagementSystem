@@ -189,6 +189,27 @@ namespace BloodBankManagementSystem.Migrations
 
                     b.ToTable("Hospital");
                 });
+
+            modelBuilder.Entity("BloodBankManagementSystem.Entities.ViewBloodAvailable", b =>
+                {
+                    b.Property<int>("Funkey")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BloodBankID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BloodGroup")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfBottles")
+                        .HasColumnType("int");
+
+                    b.HasKey("Funkey");
+
+                    b.ToTable("bloods");
+                });
 #pragma warning restore 612, 618
         }
     }

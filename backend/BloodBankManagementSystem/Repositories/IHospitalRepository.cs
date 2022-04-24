@@ -13,5 +13,6 @@ namespace BloodBankManagementSystem.Repositories
         void RemoveHospital(int HospitalID);
         void UpdateHospital(Hospital hospital);
         List<Hospital> GetHospitalDetails();
+       
     }
 }

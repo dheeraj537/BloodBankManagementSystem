@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import { AddblooddonationcampComponent } from './Components/addblooddonationcamp/addblooddonationcamp.component';
 
-
 import { BlooddonationcampService } from './Services/blooddonationcamp.service';
 import { ViewallblooddonationcampsComponent } from './Components/viewallblooddonationcamps/viewallblooddonationcamps.component';
 import { BlooddonationcampmenuComponent } from './Components/blooddonationcampmenu/blooddonationcampmenu.component';
@@ -34,9 +33,10 @@ import { HospitalControllerService } from './Services/hospital-controller.servic
 import { BloodbankserviceService } from './Services/bloodbankservice.service';
 import { BlooddonorcontrollerService } from './Services/blooddonorcontroller.service';
 import { GetbloodinventoryComponent } from './Components/getbloodinventory/getbloodinventory.component';
-import { TransferbloodComponent } from './Components/transferblood/transferblood.component';
+
 import { SearchbloodComponent } from './Components/searchblood/searchblood.component';
 import { LogoutComponent } from './Components/logout/logout.component';
+import { ViewbloodavailableComponent } from './Components/viewbloodavailable/viewbloodavailable.component';
 
 
 @NgModule({
@@ -65,9 +65,10 @@ import { LogoutComponent } from './Components/logout/logout.component';
 
     AddblooddonordonationComponent,
     GetbloodinventoryComponent,
-    TransferbloodComponent,
+   
     SearchbloodComponent,
-    LogoutComponent
+    LogoutComponent,
+    ViewbloodavailableComponent
 
 
   ],

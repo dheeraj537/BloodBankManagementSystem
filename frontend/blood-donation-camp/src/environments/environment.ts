@@ -6,6 +6,9 @@
 
 export const environment = {
   production: false,
+
+
+
   BloodDonationCamp_api:'https://localhost:44309/api/BloodDonationCamp/',
   hospital_api:'https://localhost:44309/api/Hospital/',
   BloodBank_api:'https://localhost:44309/api/BloodBank/',

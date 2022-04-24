@@ -10,9 +10,7 @@ namespace BloodBankManagementSystem.Repositories
 {
     public class BloodDonorRepository : IBloodDonorRepository
     {
-        private MainContext _context = null;
-
-        public object[] BloodDonorID { get; private set; }
+        private MainContext _context;
 
         public BloodDonorRepository(MainContext context)
         {
@@ -34,17 +32,64 @@ namespace BloodBankManagementSystem.Repositories
         {
             BloodDonor bloodDonor = _context.BloodDonors.Find(BloodDonorID);
             _context.BloodDonors.Remove(bloodDonor);
+           
             _context.SaveChanges();
         }
 
-       
+        
 
         public void DonateBlood(BloodDonorDonation bloodDonorDonation)
         {
             _context.BloodDonorDonations.Add(bloodDonorDonation);
             _context.SaveChanges();
+            addbloods(bloodDonorDonation);
 
         }
+
+        private string addbloods(BloodDonorDonation bloodDonorDonation)
+        {
+            string str;
+            try
+            {
+                str = "not found";
+               List<ViewBloodAvailable> vms;
+                vms = _context.bloods.Where(x => x.BloodBankID == bloodDonorDonation.BloodBankID &&x.BloodGroup==bloodDonorDonation.BloodGroup).Select(x => x).ToList();
+                if (vms.Capacity == 0)
+                {
+                    _context.Add(new ViewBloodAvailable()
+                    {
+                        BloodBankID = bloodDonorDonation.BloodBankID,
+                        BloodGroup = bloodDonorDonation.BloodGroup,
+                        NumberOfBottles = bloodDonorDonation.NumberofBottles
+                    });
+                    _context.SaveChanges();
+                }
+                else
+                {
+
+
+                                vms[0].BloodBankID = bloodDonorDonation.BloodBankID;
+                                vms[0].BloodGroup = bloodDonorDonation.BloodGroup;
+                                vms[0].NumberOfBottles = vms[0].NumberOfBottles + bloodDonorDonation.NumberofBottles;
+                    _context.bloods.Update(vms[0]);
+                            
+
+                            _context.SaveChanges();
+                        
+                    }
+                
+            }
+            catch (Exception e)
+            {
+                str = e.Message;
+
+            }
+            return str;
+}
+
+
+            
+       
 
         public void UpdateBloodDonor(BloodDonor bloodDonor)
         {
@@ -62,16 +107,7 @@ namespace BloodBankManagementSystem.Repositories
 
         
 
-        public List<BloodDonorDonation> SearchBlood(string BloodGroup)
-        {
-            return _context.BloodDonorDonations.Where(x => x.BloodGroup == BloodGroup).ToList();
-            
-
-
-
-
-            throw new NotImplementedException();
-        }
+       
 
         public List<BloodDonorDonation> GetBloodInventory()
         {
@@ -94,7 +130,73 @@ namespace BloodBankManagementSystem.Repositories
         {
             BloodDonorDonation bloodDonorDonation = _context.BloodDonorDonations.Find(BloodDonationID);
             _context.BloodDonorDonations.Remove(bloodDonorDonation);
+            deletebloods(bloodDonorDonation);
             _context.SaveChanges();
+        }
+
+        private void deletebloods(BloodDonorDonation bloodDonorDonation)
+        {
+            string str;
+            try
+            {
+                str = "unable to delete blood from inventory";
+                
+                List<ViewBloodAvailable> vms;
+                vms = _context.bloods.Where(x => x.BloodBankID == bloodDonorDonation.BloodBankID && x.BloodGroup == bloodDonorDonation.BloodGroup).Select(x => x).ToList();
+                vms[0].NumberOfBottles = vms[0].NumberOfBottles - bloodDonorDonation.NumberofBottles;
+                _context.bloods.Update(vms[0]);
+            }
+            catch(Exception e)
+            {
+                str = e.Message;
+            }
+        }
+
+        public List<ViewBloodAvailable> ViewBloodAvailable()
+        {
+            return _context.bloods.ToList();
+            throw new NotImplementedException();
+            
+        }
+
+       
+
+        private void frombloodbank(ViewBloodAvailable viewBloodAvailable,int numberOfBottles)
+        {
+            List<ViewBloodAvailable> vms = _context.bloods.Where(x => x.BloodBankID == viewBloodAvailable.BloodBankID && x.BloodGroup == viewBloodAvailable.BloodGroup).Select(x => x).ToList();
+            if (vms.Capacity != 0)
+            {
+                vms[0].NumberOfBottles = vms[0].NumberOfBottles - numberOfBottles;
+                _context.SaveChanges();
+
+            }
+        }
+
+        private void tobloodbank(ViewBloodAvailable viewBloodAvailable,int ToBloodBankID, int numberOfBottles)
+        {
+            List<ViewBloodAvailable> vm = _context.bloods.Where(x => x.BloodBankID == ToBloodBankID && x.BloodGroup == viewBloodAvailable.BloodGroup).Select(x => x).ToList();
+            if (vm.Capacity != 0)
+            {
+                vm[0].NumberOfBottles = vm[0].NumberOfBottles + numberOfBottles;
+                _context.SaveChanges();
+                frombloodbank(viewBloodAvailable, numberOfBottles);
+                
+
+            }
+
+
+           
+        }
+
+        public void transfer(int BloodBankID, string BloodGroup, int ToBloodBankID, int NumberOfBottles)
+        {
+            List<ViewBloodAvailable> vms = _context.bloods.Where(x => x.BloodBankID == BloodBankID && x.BloodGroup == BloodGroup).Select(x => x).ToList();
+            if (vms[0].NumberOfBottles >= NumberOfBottles)
+            {
+                tobloodbank(vms[0], ToBloodBankID,NumberOfBottles);
+
+            }
+
         }
     }
 }
