@@ -11,7 +11,7 @@ bloodbanks:BloodBank[];
 bloodbank:BloodBank;
   constructor(private bloodbankservice:BloodbankserviceService) {
     this.bloodbank=new BloodBank();
-    this.AddBloodBank();
+    
   }
 
   ngOnInit(): void {

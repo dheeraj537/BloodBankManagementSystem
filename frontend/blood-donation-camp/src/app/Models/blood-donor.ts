@@ -4,6 +4,7 @@ export class BloodDonor {
     lastName:string;
     address:string;
     city:string;
-    mobileNo:number;
+    mobileNo:string;
     bloodGroup:string;
+    isEditable:boolean;
 }

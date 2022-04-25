@@ -10,6 +10,9 @@ export class ViewallblooddonationcampsComponent implements OnInit
  {
 blooddonationcamps:BloodDonationCamp[]
 blooddonationcamp:BloodDonationCamp;
+today:object=new Date();
+usercampdate:Date;
+msg:string;
   constructor(private blooddonationcampservice:BlooddonationcampService)
   {
     this.blooddonationcamp=new BloodDonationCamp();
@@ -31,6 +34,36 @@ blooddonationcamp:BloodDonationCamp;
       this.blooddonationcamps=response;
     }
     )}
+    updateblooddonationcamp(id:number,name:string,address:string,city:string,bloodbankid:number,startdate:Date,enddate:Date){
+
+      if(this.usercampdate>this.today){
+
+        this.blooddonationcamp.bloodDonationCampID=id;
+        this.blooddonationcamp.campName=name;
+        this.blooddonationcamp.adress=address;
+        this.blooddonationcamp.city=city;
+        this.blooddonationcamp.bloodBankID=bloodbankid;
+        this.blooddonationcamp.campStartDate=startdate;
+        this.blooddonationcamp.campEndDate=enddate;
+        this.blooddonationcampservice.editBloodDonationCamp(this.blooddonationcamp).subscribe(res=>{
+
+        })
+
+      }
+
+
+    }
+    GetBloodDonationCampStartDate(id:number): void{
+      
+      this.blooddonationcampservice.GetBloodDonationCampStartDate(id).subscribe(res=>{
+             this.usercampdate=new Date(res);
+
+
+
+
+      })
+
+    }
 
   }
 

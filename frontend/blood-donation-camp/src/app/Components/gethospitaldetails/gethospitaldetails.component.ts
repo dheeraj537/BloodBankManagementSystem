@@ -21,6 +21,7 @@ export class GethospitaldetailsComponent implements OnInit {
         this.GetHospitalDetails();
 
 
+
   }
 
   ngOnInit(): void {
@@ -33,12 +34,22 @@ export class GethospitaldetailsComponent implements OnInit {
   }
   DeleteHospitalDetails(id:number){
     this.hospitalcontrollerservice.RemoveHospitalDetails(id).subscribe(response=>{
-      
+
 
     })
 
+
   }
-  UpdateHospitalDetails(){
+  updatehospital(id:number,name:string,address:string,city:string,contact:string){
+    this.hospital.hospitalID=id;
+    this.hospital.hospitalName=name;
+    this.hospital.address=address;
+    this.hospital.city=city;
+    this.hospital.contactNo=contact;
+    this.hospitalcontrollerservice.updatehospital(this.hospital).subscribe(res=>{
+
+
+    })
 
   }
 

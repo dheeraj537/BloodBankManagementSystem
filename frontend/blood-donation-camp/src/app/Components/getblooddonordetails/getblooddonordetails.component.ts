@@ -33,5 +33,18 @@ export class GetblooddonordetailsComponent implements OnInit {
     })
 
   }
+  updateblooddonor(id:number,firstname:string,lastname:string,adress:string,city:string,mobile:string,bloodgroup:string){
+    this.blooddonor.bloodDonorID=id;
+    this.blooddonor.firstName=firstname;
+    this.blooddonor.lastName=lastname;
+    this.blooddonor.address=adress;
+    this.blooddonor.city=city;
+    this.blooddonor.mobileNo=mobile;
+    this.blooddonor.bloodGroup=bloodgroup;
+    this.blooddonorcontrollerservice.UpdateBloodDonor(this.blooddonor).subscribe(res=>{
+
+    })
+
+  }
 
 }

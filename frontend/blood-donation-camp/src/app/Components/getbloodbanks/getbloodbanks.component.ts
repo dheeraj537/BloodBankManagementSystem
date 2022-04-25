@@ -29,5 +29,20 @@ bloodbank:BloodBank;
     })
 
   }
+  updatebloodbank(id:number,name:string,adress:string,city:string,mobile:string){
+    this.bloodbank.bloodBankID=id;
+    this.bloodbank.bloodBankName=name;
+    this.bloodbank.address=adress;
+    this.bloodbank.city=city;
+    this.bloodbank.contactNumber=mobile;
+    this.bloodbankserviceservice.UpdateBloodBank(this.bloodbank).subscribe(res=>{
+
+    })
+  }
+  Deletebloodbank(id:number){
+    this.bloodbankserviceservice.DeleteBloodBank(id).subscribe(res=>{
+      
+    })
+  }
 
 }

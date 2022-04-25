@@ -11,7 +11,7 @@ hospitals:Hospital[];
 hospital:Hospital;
   constructor(private hospitalcontrollerservice:HospitalControllerService) {
     this.hospital=new Hospital();
-    this.AddHospitalDetails();
+    
   }
 
   ngOnInit(): void {

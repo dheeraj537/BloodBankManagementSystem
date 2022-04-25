@@ -8,7 +8,7 @@ import { Hospital } from '../Models/hospital';
   providedIn: 'root'
 })
 export class HospitalControllerService {
- 
+
 
   constructor(private http:HttpClient) { }
   hospital_api=environment.hospital_api
@@ -21,10 +21,10 @@ export class HospitalControllerService {
   //Adding Hospital Details
   AddHospitalDetails(item:Hospital):Observable<any>
   {
-    return this.http.post<string>(this.hospital_api + 'AddHospitalDetails', item);
+    return this.http.post(this.hospital_api + 'AddHospitalDetails', item);
   }
   //Updating Hospital Details
-  UpdateHospital(item:Hospital):Observable<any>
+  updatehospital(item:Hospital):Observable<any>
   {
     return this.http.put(this.hospital_api+'UpdateHospital',item)
   }

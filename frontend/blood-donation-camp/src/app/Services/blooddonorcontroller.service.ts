@@ -19,7 +19,7 @@ export class BlooddonorcontrollerService {
   }
   AddBloodDonor(item:BloodDonor):Observable<any>
   {
-    return this.http.post<string>(this.blood_donor_api+'AddBloodDonor',item);
+    return this.http.post(this.blood_donor_api+'AddBloodDonor',item);
   }
   UpdateBloodDonor(item:BloodDonor):Observable<any>
   {

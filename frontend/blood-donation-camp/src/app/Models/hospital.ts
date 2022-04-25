@@ -4,4 +4,5 @@ export class Hospital {
   address:string;
   city:string;
   contactNo:string;
+  isEditable:boolean;
 }

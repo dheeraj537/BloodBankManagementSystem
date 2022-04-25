@@ -22,7 +22,8 @@ namespace BloodBankManagementSystem.Entities
         public string BloodBankName { get; set; }
       
         public string Address { get; set; }
-        public int ContactNumber { get; set; }
+       
+        public string ContactNumber { get; set; }
         public int BloodUnits { get; set; }
         public string City { get; set; }
     }

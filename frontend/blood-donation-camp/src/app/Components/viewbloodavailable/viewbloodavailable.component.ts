@@ -28,9 +28,8 @@ op:string;
 
     }
     )}
-    transferblood(id:number,group:string){
-      let to=this.bloodavailable.tobloodBankID;
-      let bottles=this.bloodavailable.numberOfBottlesToSend;
+    transferblood(id:number,group:string,to:number,bottles:number){
+      
 
     this.blooddonorcontrollerservice.transferblood(id,group,to,bottles).subscribe(res=>{
       this.op=res;

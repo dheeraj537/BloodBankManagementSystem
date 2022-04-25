@@ -1,3 +1,7 @@
+body{
+  background-color: #051622;
+  
+}
 header,footer,nav,main
 {
 
@@ -8,19 +12,19 @@ header,footer,nav,main
 header
 {
   height: auto;
-  background-color: #00FF7F;
+  background-color:#051622;
 }
 header h1
 {
   text-align: center;
-  color: black;
+  color: #1BA098;
 }
 #box{
 
   display: inline;
   height: 50px;
   width:200px;
-  background-color: #ADFF2F;
+  background-color: lightgrey;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -68,12 +72,12 @@ nav input{
 main
 {
   height:auto;
-  background-color:white
+  background-color:#DEB992
 }
 footer
 {
   height: auto;
-  
+
   background-color:#00FF7F;
   margin-bottom: 0px;
   position: fixed;

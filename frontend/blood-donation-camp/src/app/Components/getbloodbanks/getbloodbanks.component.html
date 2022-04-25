@@ -2,8 +2,7 @@
   <table border='1' style="width:80%">
       <tr>
         <th>Blood Bank Id</th>
-        <th>User Id</th>
-          <th>Password</th>
+
           <th>Blood Bank Name </th>
           <th>Address</th>
           <th>City</th>
@@ -11,14 +10,20 @@
 
       </tr>
       <tr *ngFor="let item of bloodbanks">
-        <td>{{item.bloodBankID}}</td>
-          <td>{{item.userID}}</td>
-          <td>{{item.password}}</td>
-          <td>{{item.bloodBankName}}</td>
+        <td><input type="number" [(ngModel)]="item.bloodBankID" [disabled]="!item.isEditable"/></td>
 
-          <td>{{item.address}}</td>
-          <td>{{item.city}}</td>
-          <td>{{item.contactNumber}}</td>
+        <td><input type="text" [(ngModel)]="item.bloodBankName" [disabled]="!item.isEditable"/></td>
+
+        <td><input type="text" [(ngModel)]="item.address" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.city" [disabled]="!item.isEditable"/></td>
+        <td><input type="text" [(ngModel)]="item.contactNumber" [disabled]="!item.isEditable"/></td>
+        <td><button (click)="Deletebloodbank(item.bloodBankID)">Delete</button></td>
+        <td>
+          <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
+          <button *ngIf="item.isEditable" (click)="updatebloodbank(item.bloodBankID,item.bloodBankName,item.address,item.city,item.contactNumber)">Save</button>
+
+
+       </td>
 
 
       </tr>

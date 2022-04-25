@@ -55,7 +55,7 @@ namespace BloodBankManagementSystem.Controllers
             }
         }
         [HttpDelete]
-        [Route("RemoveBloodBank")]
+        [Route("RemoveBloodBank/{BloodBankID}")]
         public IActionResult RemoveBloodBank(int BloodBankID)
         {
             try

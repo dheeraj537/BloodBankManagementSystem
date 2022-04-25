@@ -6,4 +6,5 @@ export class BloodDonationCamp {
   bloodBankID:number;
   campStartDate:Date;
   campEndDate:Date;
+  isEditable:boolean;
 }

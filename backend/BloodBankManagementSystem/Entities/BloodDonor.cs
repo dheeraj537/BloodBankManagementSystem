@@ -16,7 +16,8 @@ namespace BloodBankManagementSystem.Entities
             public string LastName { get; set; }
             public string Address { get; set; }
             public string City { get; set; }
-            public int MobileNo { get; set; }
+            
+            public string MobileNo { get; set; }
             public string BloodGroup { get; set; }
             
 

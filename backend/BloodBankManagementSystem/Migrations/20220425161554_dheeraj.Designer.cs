@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BloodBankManagementSystem.Migrations
 {
     [DbContext(typeof(MainContext))]
-    [Migration("20220423101602_dheeraj")]
+    [Migration("20220425161554_dheeraj")]
     partial class dheeraj
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,8 +56,8 @@ namespace BloodBankManagementSystem.Migrations
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ContactNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("ContactNumber")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Password")
                         .HasColumnType("int");
@@ -123,8 +123,8 @@ namespace BloodBankManagementSystem.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MobileNo")
-                        .HasColumnType("int");
+                    b.Property<string>("MobileNo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("BloodDonorID");
 
@@ -184,7 +184,6 @@ namespace BloodBankManagementSystem.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HospitalName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HospitalID");

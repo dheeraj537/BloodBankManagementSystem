@@ -4,6 +4,8 @@
           <th>BloodBankID</th>
           <th>BloodGroup</th>
           <th>Number of bottles</th>
+          <th>enter bloodbank ID to transfer</th>
+          <th>number of bottles to transfer</th>
 
 
       </tr>
@@ -13,7 +15,7 @@
           <td>{{item.numberOfBottles}}</td>
           <td><input type="number" name="" id="" [(ngModel)]="item.tobloodBankID"></td>
           <td><input type="number" name="" id="" [(ngModel)]="item.numberOfBottlesToSend"></td>
-          <td><button (click)="transferblood(item.bloodBankID,item.bloodGroup)">transfer</button></td>
+          <td><button (click)="transferblood(item.bloodBankID,item.bloodGroup,item.tobloodBankID,item.numberOfBottlesToSend)">transfer</button></td>
           <td>{{op}}</td>
 
 

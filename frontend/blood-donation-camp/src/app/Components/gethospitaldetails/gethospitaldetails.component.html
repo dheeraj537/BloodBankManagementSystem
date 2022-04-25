@@ -8,13 +8,18 @@
           <th>ConatctNo</th>
       </tr>
       <tr *ngFor="let item of hospitals">
-          <td>{{item.hospitalID}}</td>
-          <td>{{item.hospitalName}}</td>
-          <td>{{item.address}}</td>
-          <td>{{item.city}}</td>
-          <td>{{item.contactNo}}</td>
+          <td><input type="text" [(ngModel)]="item.hospitalID" [disabled]="!item.isEditable"/></td>
+          <td><input type="text" [(ngModel)]="item.hospitalName" [disabled]="!item.isEditable"/></td>
+          <td><input type="text" [(ngModel)]="item.address" [disabled]="!item.isEditable"/></td>
+          <td><input type="text" [(ngModel)]="item.city" [disabled]="!item.isEditable"/></td>
+          <td><input type="text" [(ngModel)]="item.contactNo" [disabled]="!item.isEditable"/></td>
           <td><button (click)="DeleteHospitalDetails(item.hospitalID)">Delete</button></td>
+          <td>
+            <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
+            <button *ngIf="item.isEditable" (click)="updatehospital(item.hospitalID,item.hospitalName,item.address,item.city,item.contactNo)">Save</button>
 
+
+         </td>
       </tr>
 
 

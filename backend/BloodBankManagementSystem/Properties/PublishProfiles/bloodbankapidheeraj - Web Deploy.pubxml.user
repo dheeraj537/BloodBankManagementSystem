@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+57pyY/uRkyAzLi0yNK+ogAAAAACAAAAAAAQZgAAAAEAACAAAABMfJ2eA2fBOh1WHmBIkKVdTfZ1zA4ON0PSQhHmZc//VgAAAAAOgAAAAAIAACAAAACdnyG7ZMEQ0tcvCz8878i8vCwTA8HYLTo0jvATqDtMwoAAAAAVoC2T0tmwey2F0yPT1oMvrbfnRQrjLglY1oOwqCK3mOD8AEqJ1/OXUHPrSeZB3de/N0ynVze7oYQpUehH42hYDsU5cnwbNa1gMLdwfh0eGh6SIm1ngtb6+TKJeGKpDilhRKT2zN8SNLih7jl+kxaoqfcwkstRSqq7CD+jZA38YkAAAACtYj7Ph+YkRS0iQ8cZb0wU3lPneYsoI6k9ZxmMDoGdGXdZqUEfFnS7TvyktJU+4mpXIfrblHtID6QUGZSwRuQB</EncryptedPassword>
+    <History>True|2022-04-25T17:25:59.3554902Z;True|2022-04-25T22:41:37.1585131+05:30;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="BloodBankManagementSystem.DBContext.MainContext">
+      <Value>Data Source=tcp:bloodbankmanagementsystemdbserver.database.windows.net,1433%3bInitial Catalog=BloodBankManagementSystem_db%3bUser Id=dheeraj%40bloodbankmanagementsystemdbserver%3bPassword=Dheeru1915</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

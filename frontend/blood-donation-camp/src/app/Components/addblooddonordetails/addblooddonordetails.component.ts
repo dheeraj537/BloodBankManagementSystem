@@ -9,17 +9,17 @@ import { BlooddonorcontrollerService } from 'src/app/Services/blooddonorcontroll
 export class AddblooddonordetailsComponent implements OnInit {
   blooddonors:BloodDonor[];
   blooddonor:BloodDonor;
-  constructor(private blooddonorcontrollerservice:BlooddonorcontrollerService) { 
+  constructor(private blooddonorcontrollerservice:BlooddonorcontrollerService) {
     this.blooddonor=new BloodDonor();
-    this.AddBloodDonor();  
+    
   }
 
   ngOnInit(): void {
   }
-AddBloodDonor(){
+Addblooddonor(){
   this.blooddonorcontrollerservice.AddBloodDonor(this.blooddonor).subscribe(res=>{
 
   })
-}  
+}
 
 }

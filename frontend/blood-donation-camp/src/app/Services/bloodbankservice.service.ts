@@ -23,6 +23,11 @@ export class BloodbankserviceService {
   {
     return this.http.put(this.bloodbank_api+'UpdateBloodBank',item);
   }
+  DeleteBloodBank(id:number):Observable<any>
+  {
+    return this.http.delete(this.bloodbank_api+'RemoveBloodBank/'+id)
+
+  }
 
 
 
