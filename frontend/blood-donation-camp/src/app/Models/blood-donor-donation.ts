@@ -7,4 +7,6 @@ export class BloodDonorDonation {
     bloodDonorID:number;
     bloodBankID:number;
     bloodGroup:string;
+    ExpiryDate:Date;
+
 }

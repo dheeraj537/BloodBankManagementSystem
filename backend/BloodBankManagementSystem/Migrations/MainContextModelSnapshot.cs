@@ -48,9 +48,6 @@ namespace BloodBankManagementSystem.Migrations
                     b.Property<string>("BloodBankName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BloodUnits")
-                        .HasColumnType("int");
-
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
@@ -174,6 +171,9 @@ namespace BloodBankManagementSystem.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BloodBankID")
+                        .HasColumnType("int");
 
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");

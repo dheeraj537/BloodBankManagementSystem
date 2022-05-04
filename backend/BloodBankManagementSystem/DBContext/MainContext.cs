@@ -22,7 +22,7 @@ namespace BloodBankManagementSystem.DBContext
        
         public DbSet<BloodBank> BloodBanks { get; set; }
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<ViewBloodAvailable> bloods { get; set; }
+        public  DbSet<ViewBloodAvailable> bloods { get; set; }
 
 
 

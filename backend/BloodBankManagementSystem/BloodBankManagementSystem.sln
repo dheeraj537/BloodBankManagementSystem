@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodBankManagementSystem", "BloodBankManagementSystem.csproj", "{28E478E2-1332-47FE-85EE-03F26C79B277}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloodBankManagementSystem", "BloodBankManagementSystem.csproj", "{28E478E2-1332-47FE-85EE-03F26C79B277}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inventoryfunction", "..\inventoryfunction\inventoryfunction.csproj", "{7D59D330-EDBA-404B-B5C7-BC428D329AEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{28E478E2-1332-47FE-85EE-03F26C79B277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28E478E2-1332-47FE-85EE-03F26C79B277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28E478E2-1332-47FE-85EE-03F26C79B277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D59D330-EDBA-404B-B5C7-BC428D329AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D59D330-EDBA-404B-B5C7-BC428D329AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D59D330-EDBA-404B-B5C7-BC428D329AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D59D330-EDBA-404B-B5C7-BC428D329AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

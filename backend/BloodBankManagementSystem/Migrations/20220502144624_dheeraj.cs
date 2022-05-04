@@ -31,7 +31,6 @@ namespace BloodBankManagementSystem.Migrations
                     BloodBankName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BloodUnits = table.Column<int>(type: "int", nullable: false),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -119,7 +118,8 @@ namespace BloodBankManagementSystem.Migrations
                     HospitalName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ContactNo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BloodBankID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

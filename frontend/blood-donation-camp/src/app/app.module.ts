@@ -54,7 +54,7 @@ import { ViewbloodavailableComponent } from './Components/viewbloodavailable/vie
 
     GetbloodbanksComponent,
     AddbloodbankComponent,
-    
+
     BloodbankmenuComponent,
     LoginComponent,
     BlooddonormenuComponent,

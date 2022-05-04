@@ -71,20 +71,20 @@ namespace BloodBankManagementSystem.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [HttpPost]
-        [Route("DonateBlood")]
-        public IActionResult AddBloodDonarDonation(BloodDonorDonation bloodDonorDonation)
-        {
-            try
-            {
-                _repository.DonateBlood(bloodDonorDonation);
-                return Ok("Blood Donar Donation Detail Added");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[HttpPost]
+        //[Route("DonateBlood")]
+        //public IActionResult AddBloodDonarDonation(BloodDonorDonation bloodDonorDonation)
+        //{
+        //    try
+        //    {
+        //        _repository.DonateBlood(bloodDonorDonation);
+        //        return Ok("Blood Donar Donation Detail Added");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
         [HttpGet]
         [Route("SearchBlood/{BloodGroup}/{BloodBankID}")]
         public int SearchBlood(string BloodGroup,int BloodBankID)
@@ -121,20 +121,20 @@ namespace BloodBankManagementSystem.Controllers
             List<ViewBloodAvailable> viewBloods = _repository.ViewBloodAvailable();
             return Ok(viewBloods);
         }
-        [HttpGet]
-        [Route("transferblood/{bloodBankID}/{BloodGroup}/{tobloodBankID}/{numberOfBottlesToSend}")]
-        public IActionResult transferblood(int bloodBankID,string BloodGroup,int tobloodBankID,int numberOfBottlesToSend)
-        {
-            try
-            {
-                _repository.transfer(bloodBankID,BloodGroup,tobloodBankID,numberOfBottlesToSend);
-                return Ok("Tranfer completed");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[HttpGet]
+        //[Route("transferblood/{bloodBankID}/{BloodGroup}/{tobloodBankID}/{numberOfBottlesToSend}")]
+        //public IActionResult transferblood(int bloodBankID, string BloodGroup, int tobloodBankID, int numberOfBottlesToSend)
+        //{
+        //    try
+        //    {
+        //        _repository.transfer(bloodBankID, BloodGroup, tobloodBankID, numberOfBottlesToSend);
+        //        return Ok("Tranfer completed");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
 
     }

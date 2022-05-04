@@ -14,12 +14,16 @@ export class AddblooddonordonationComponent implements OnInit {
   blooddonordonation:BloodDonorDonation;
   constructor(private blooddonorcontrollerservice:BlooddonorcontrollerService) {
     this.blooddonordonation=new BloodDonorDonation();
-    
+
    }
 
    ngOnInit(): void {
   }
 AddBloodDonorDonation(){
+  this.blooddonordonation.bloodDonationDate=new Date();
+  this.blooddonordonation.ExpiryDate=new Date();
+  this.blooddonordonation.ExpiryDate.setDate(this.blooddonordonation.bloodDonationDate.getDate()+42);
+
   this.blooddonorcontrollerservice.AddBloodDonorDonation(this.blooddonordonation).subscribe(res=>{
 
   })

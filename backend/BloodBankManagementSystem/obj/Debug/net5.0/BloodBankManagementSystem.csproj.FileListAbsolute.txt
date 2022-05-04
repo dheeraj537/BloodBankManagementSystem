@@ -373,3 +373,16 @@ D:\reviewbloodbank\backend\BloodBankManagementSystem\obj\Debug\net5.0\BloodBankM
 D:\reviewbloodbank\backend\BloodBankManagementSystem\obj\Debug\net5.0\ref\BloodBankManagementSystem.dll
 D:\reviewbloodbank\backend\BloodBankManagementSystem\obj\Debug\net5.0\BloodBankManagementSystem.pdb
 D:\reviewbloodbank\backend\BloodBankManagementSystem\obj\Debug\net5.0\BloodBankManagementSystem.genruntimeconfig.cache
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Core.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Core.Amqp.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Messaging.ServiceBus.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Storage.Blobs.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Storage.Common.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Microsoft.Azure.Amqp.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\System.IO.Hashing.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\System.Memory.Data.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Identity.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Storage.Files.Shares.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Azure.Storage.Queues.dll
+D:\reviewbloodbank\backend\BloodBankManagementSystem\bin\Debug\net5.0\Microsoft.Extensions.Azure.dll

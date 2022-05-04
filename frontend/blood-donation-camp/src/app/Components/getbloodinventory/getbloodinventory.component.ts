@@ -2,6 +2,7 @@ import { Variable } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
 import { BloodDonorDonation } from 'src/app/Models/blood-donor-donation';
 import { BlooddonorcontrollerService } from 'src/app/Services/blooddonorcontroller.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-getbloodinventory',
   templateUrl: './getbloodinventory.component.html',
@@ -13,7 +14,7 @@ blooddonordonation:BloodDonorDonation;
 
 result1:Object=new Date();
 
-  constructor(private blooddonorcontrollerservice:BlooddonorcontrollerService){
+  constructor(private blooddonorcontrollerservice:BlooddonorcontrollerService,private router:Router){
     this.blooddonordonation=new BloodDonorDonation();
     this.result1= this.blooddonordonation.bloodDonationDate;
         this.GetBloodInventory();
@@ -37,6 +38,7 @@ result1:Object=new Date();
     return date;
   }
   DeleteExpiredBlood(id:number){
+    this.router.navigateByUrl('viewbloodinventory');
     this.blooddonorcontrollerservice.DeleteExpiredBlood(id).subscribe(response=>{
 
 

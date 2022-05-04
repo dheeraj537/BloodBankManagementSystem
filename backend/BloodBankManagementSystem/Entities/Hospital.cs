@@ -18,6 +18,12 @@ namespace BloodBankManagementSystem.Entities
         public string City { get; set; }
       
         public string ContactNo { get; set; }
+        [ForeignKey("BloodBank")]
+        public int BloodBankID { get; set; }
+
+
+
+
 
     }
 }

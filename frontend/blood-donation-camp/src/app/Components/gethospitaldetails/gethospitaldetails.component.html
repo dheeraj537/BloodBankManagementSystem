@@ -13,10 +13,11 @@
           <td><input type="text" [(ngModel)]="item.address" [disabled]="!item.isEditable"/></td>
           <td><input type="text" [(ngModel)]="item.city" [disabled]="!item.isEditable"/></td>
           <td><input type="text" [(ngModel)]="item.contactNo" [disabled]="!item.isEditable"/></td>
+          <td><input type="text" [(ngModel)]="item.bloodBankID" [disabled]="!item.isEditable"/></td>
           <td><button (click)="DeleteHospitalDetails(item.hospitalID)">Delete</button></td>
           <td>
             <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
-            <button *ngIf="item.isEditable" (click)="updatehospital(item.hospitalID,item.hospitalName,item.address,item.city,item.contactNo)">Save</button>
+            <button *ngIf="item.isEditable" (click)="updatehospital(item.hospitalID,item.hospitalName,item.address,item.city,item.contactNo,item.bloodBankID)">Save</button>
 
 
          </td>
@@ -26,5 +27,6 @@
 
   </table>
   <button><a routerLink="/hospitalmenu">back</a></button>
+  
 </div>
 

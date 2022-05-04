@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
 import { Bloodavailable } from 'src/app/Models/bloodavailable';
+import { Transferdetails } from 'src/app/Models/transferdetails';
 import { BlooddonorcontrollerService } from 'src/app/Services/blooddonorcontroller.service';
 
 @Component({
@@ -11,9 +12,13 @@ import { BlooddonorcontrollerService } from 'src/app/Services/blooddonorcontroll
 export class ViewbloodavailableComponent implements OnInit {
 bloodsavailable:Bloodavailable[];
 bloodavailable:Bloodavailable;
+transferdetails:Transferdetails;
 op:string;
   constructor(private blooddonorcontrollerservice:BlooddonorcontrollerService) {
     this.bloodavailable=new Bloodavailable();
+    this.transferdetails=new Transferdetails();
+
+
 
     this.ViewBloodAvailable();
 
@@ -29,9 +34,13 @@ op:string;
     }
     )}
     transferblood(id:number,group:string,to:number,bottles:number){
-      
 
-    this.blooddonorcontrollerservice.transferblood(id,group,to,bottles).subscribe(res=>{
+    this.transferdetails.bloodBankID=id;
+    this.transferdetails.bloodGroup=group;
+    this.transferdetails.toBloodBankID=to;
+    this.transferdetails.numberOfBottlesToSend=bottles;
+
+    this.blooddonorcontrollerservice.transferblood(this.transferdetails).subscribe(res=>{
       this.op=res;
 
 

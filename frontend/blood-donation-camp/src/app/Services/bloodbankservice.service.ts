@@ -10,22 +10,22 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BloodbankserviceService {
-  bloodbank_api=environment.BloodBank_api;
+  bloodbank_api=environment.api_base;
 
   constructor(private http:HttpClient) { }
   GetBloodBanks():Observable<BloodBank[]>{
-    return this.http.get<BloodBank[]>(this.bloodbank_api+'GetBloodBanks')
+    return this.http.get<BloodBank[]>(this.bloodbank_api+'BloodBank/GetBloodBanks')
   }
   AddBloodBank(item:BloodBank):Observable<any>{
-    return this.http.post<string>(this.bloodbank_api+'AddBloodBank',item);
+    return this.http.post<string>(this.bloodbank_api+'BloodBank/AddBloodBank',item);
   }
   UpdateBloodBank(item:BloodBank):Observable<any>
   {
-    return this.http.put(this.bloodbank_api+'UpdateBloodBank',item);
+    return this.http.put(this.bloodbank_api+'BloodBank/UpdateBloodBank',item);
   }
   DeleteBloodBank(id:number):Observable<any>
   {
-    return this.http.delete(this.bloodbank_api+'RemoveBloodBank/'+id)
+    return this.http.delete(this.bloodbank_api+'BloodBank/RemoveBloodBank/'+id)
 
   }
 

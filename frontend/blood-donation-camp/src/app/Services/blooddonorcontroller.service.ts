@@ -5,52 +5,53 @@ import { environment } from 'src/environments/environment';
 import { BloodDonor } from '../Models/blood-donor';
 import { BloodDonorDonation } from 'src/app/Models/blood-donor-donation';
 import { Bloodavailable } from '../Models/bloodavailable';
+import { Transferdetails } from '../Models/transferdetails';
 @Injectable({
   providedIn: 'root'
 })
 export class BlooddonorcontrollerService {
 
-  blood_donor_api=environment.blood_donor_api
+  blood_donor_api=environment.api_base
   constructor(private http:HttpClient) { }
 
   GetBloodDonors():Observable<BloodDonor[]>
   {
-    return this.http.get<BloodDonor[]>(this.blood_donor_api+'GetBloodDonors')
+    return this.http.get<BloodDonor[]>(this.blood_donor_api+'BloodDonor/GetBloodDonors')
   }
   AddBloodDonor(item:BloodDonor):Observable<any>
   {
-    return this.http.post(this.blood_donor_api+'AddBloodDonor',item);
+    return this.http.post(this.blood_donor_api+'BloodDonor/AddBloodDonor',item);
   }
   UpdateBloodDonor(item:BloodDonor):Observable<any>
   {
-    return this.http.put(this.blood_donor_api+'UpdateBloodDonor',item);
+    return this.http.put(this.blood_donor_api+'BloodDonor/UpdateBloodDonor',item);
   }
   RemoveBloodDonor(bloodDonorId:number):Observable<any>
   {
-    return this.http.delete(this.blood_donor_api+'RemoveBloodDonor/'+bloodDonorId);
+    return this.http.delete(this.blood_donor_api+'BloodDonor/RemoveBloodDonor/'+bloodDonorId);
   }
   AddBloodDonorDonation(item:BloodDonorDonation):Observable<any>
   {
-    return this.http.post(this.blood_donor_api+'DonateBlood',item);
+    return this.http.post(this.blood_donor_api+'Bloodinventory',item);
   }
   GetBloodInventory():Observable<BloodDonorDonation[]>{
-    return this.http.get<BloodDonorDonation[]>(this.blood_donor_api+'GetBloodInventory')
+    return this.http.get<BloodDonorDonation[]>(this.blood_donor_api+'BloodDonor/GetBloodInventory')
   }
 
   SearchBlood(bloodGroup:string,bloodBankID:number):Observable<number>{
-    return this.http.get<number>(this.blood_donor_api+'SearchBlood/'+bloodGroup+'/'+bloodBankID);
+    return this.http.get<number>(this.blood_donor_api+'BloodDonor/SearchBlood/'+bloodGroup+'/'+bloodBankID);
   }
   DeleteExpiredBlood(id:number):Observable<any>
   {
-    return this.http.delete(this.blood_donor_api+'DeleteExpiredBlood/'+id);
+    return this.http.delete(this.blood_donor_api+'BloodDonor/DeleteExpiredBlood/'+id);
   }
   ViewBloodAvailable():Observable<Bloodavailable[]>
   {
-    return this.http.get<Bloodavailable[]>(this.blood_donor_api+'ViewBloodAvailable');
+    return this.http.get<Bloodavailable[]>(this.blood_donor_api+'BloodDonor/ViewBloodAvailable');
   }
-  transferblood(bloodBankID:number,bloodGroup:string,tobloodBankID:number,numberOfBottles:number):Observable<any>
+  transferblood(item:Transferdetails):Observable<any>
   {
-    return this.http.get(this.blood_donor_api+'transferblood/'+bloodBankID+'/'+bloodGroup+'/'+tobloodBankID+'/'+numberOfBottles);
+    return this.http.post(this.blood_donor_api+'Transfer',item);
 
   }
 }

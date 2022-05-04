@@ -5,4 +5,5 @@ export class Hospital {
   city:string;
   contactNo:string;
   isEditable:boolean;
+  bloodBankID:number;
 }

@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Admin } from 'src/app/Models/admin';
 import { Router } from '@angular/router';
 import { AdminloginService } from 'src/app/Services/adminlogin.service';
+import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class DataSharingService {
+    public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+}
 
 @Component({
   selector: 'app-login',

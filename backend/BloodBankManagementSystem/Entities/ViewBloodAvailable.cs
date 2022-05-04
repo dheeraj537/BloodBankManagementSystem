@@ -17,5 +17,7 @@ namespace BloodBankManagementSystem.Entities
         public  int BloodBankID { get; set; }
         public  string BloodGroup { get; set; }
         public int NumberOfBottles { get; set; }
+       
+      
     }
 }

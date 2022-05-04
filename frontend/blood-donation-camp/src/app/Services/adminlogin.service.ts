@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AdminloginService {
-  admin_api=environment.admin_api;
+  admin_api=environment.api_base;
 
   constructor(private http:HttpClient) { }
   Validate(item:Admin):Observable<any>{
-    return this.http.post(this.admin_api+'Validate',item);
+    return this.http.post(this.admin_api+'Validate/Validate',item);
   }
 }

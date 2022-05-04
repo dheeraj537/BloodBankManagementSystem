@@ -11,7 +11,7 @@ GO
 BEGIN TRANSACTION;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     CREATE TABLE [Admins] (
         [AdminID] nvarchar(450) NOT NULL,
@@ -22,7 +22,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     CREATE TABLE [BloodBanks] (
         [BloodBankID] int NOT NULL IDENTITY,
@@ -31,14 +31,13 @@ BEGIN
         [BloodBankName] nvarchar(max) NULL,
         [Address] nvarchar(max) NULL,
         [ContactNumber] nvarchar(max) NULL,
-        [BloodUnits] int NOT NULL,
         [City] nvarchar(max) NULL,
         CONSTRAINT [PK_BloodBanks] PRIMARY KEY ([BloodBankID])
     );
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     CREATE TABLE [BloodDonationCamps] (
         [BloodDonationCampID] int NOT NULL IDENTITY,
@@ -53,7 +52,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     CREATE TABLE [BloodDonorDonations] (
         [BloodDonationID] int NOT NULL IDENTITY,
@@ -70,7 +69,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     CREATE TABLE [Blooddonors] (
         [BloodDonorID] int NOT NULL IDENTITY,
@@ -85,7 +84,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     CREATE TABLE [bloods] (
         [Funkey] int NOT NULL IDENTITY,
@@ -97,7 +96,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     CREATE TABLE [Hospital] (
         [HospitalID] int NOT NULL IDENTITY,
@@ -105,15 +104,16 @@ BEGIN
         [Address] nvarchar(max) NULL,
         [City] nvarchar(max) NULL,
         [ContactNo] nvarchar(max) NULL,
+        [BloodBankID] int NOT NULL,
         CONSTRAINT [PK_Hospital] PRIMARY KEY ([HospitalID])
     );
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220425161554_dheeraj')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220502144624_dheeraj')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220425161554_dheeraj', N'5.0.13');
+    VALUES (N'20220502144624_dheeraj', N'5.0.13');
 END;
 GO
 

@@ -31,6 +31,17 @@ namespace BloodBankManagementSystem.Repositories
         {
             BloodBank bloodBank = _context.BloodBanks.Find(BloodBankID);
             _context.BloodBanks.Remove(bloodBank);
+            List<BloodDonorDonation> donations = _context.BloodDonorDonations.Where(x => x.BloodBankID == BloodBankID).Select(x => x).ToList();
+            for(int i=0;i<donations.Count;i++){
+                _context.BloodDonorDonations.Remove(donations[i]);
+            }
+            List<ViewBloodAvailable> blood = _context.bloods.Where(x => x.BloodBankID == BloodBankID).Select(x => x).ToList();
+            for (int i = 0; i <blood.Count; i++)
+            {
+                _context.bloods.Remove(blood[i]);
+            }
+
+
             _context.SaveChanges();
         }
 
