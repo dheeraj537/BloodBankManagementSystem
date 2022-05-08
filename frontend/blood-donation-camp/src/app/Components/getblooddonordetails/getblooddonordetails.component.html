@@ -1,31 +1,33 @@
-
-<div>
+<header><h1>VIEW ALL BLOOD DONORS</h1></header>
+<div class="topnav">
+  <a routerLink="/blooddonormenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
+<br>
+<br>
+<div class="divScroll">
     <table border="1" style="width:50%">
       <tr>
-        <th>Blood Donar Id</th>
-        <th>FirstName</th>
-        <th>Lastname</th>
-        <th>city</th>
-        <th>address</th>
-        <th>Mobile No</th>
+        <th>Blood Donor ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Mobile Number</th>
         <th>Blood Group</th>
       </tr>
       <tr *ngFor="let item of blooddonors">
-        <td><input type="text" [(ngModel)]="item.bloodDonorID" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.firstName" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.lastName" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.address" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.city" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.mobileNo" [disabled]="!item.isEditable"/></td>
-        <td><input type="text" [(ngModel)]="item.bloodGroup" [disabled]="!item.isEditable"/></td>
-        <td><button (click)="RemoveBloodDonor(item.bloodDonorID)">Delete</button></td>
-        <td>
-          <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
-          <button *ngIf="item.isEditable" (click)="updateblooddonor(item.bloodDonorID,item.firstName,item.lastName,item.address,item.city,item.mobileNo,item.bloodGroup)">Save</button>
-
-
-       </td>
+        <td>{{item.bloodDonorID}}</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.mobileNo}}</td>
+        <td>{{item.bloodGroup}}</td>
+        <td><button id="btn" (click)="RemoveBloodDonor(item.bloodDonorID)" onclick="alert('Blood Donor Deleted')" >Delete</button></td>
       </tr>
     </table>
-    <button><a routerLink="/blooddonormenu">back</a></button>
   </div>
+  <footer>
+    <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+  </footer>

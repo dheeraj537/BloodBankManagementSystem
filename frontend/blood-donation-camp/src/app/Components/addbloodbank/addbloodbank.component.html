@@ -1,15 +1,14 @@
-<header> <h1>Add Blood Bank Details</h1> </header>
+<header><h1>ADD BLOOD BANK DETAILS</h1></header>
+<div class="topnav">
+  <a routerLink="/bloodbankmenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
+<br>
 <div>
+
   <table>
 
-    <tr>
-      <td id="textele">User Id</td>
-      <td><input type="number" name="" id="" [(ngModel)]="bloodbank.userID"></td>
-    </tr>
-    <tr>
-      <td id="textele">Password</td>
-      <td><input type="number" name="" id="" [(ngModel)]="bloodbank.password"></td>
-    </tr>
+   
     <tr>
       <td id="textele">Blood Bank Name</td>
       <td><input type="text" name="" id="" [(ngModel)]="bloodbank.bloodBankName"></td>
@@ -28,9 +27,14 @@
     </tr>
     <tr>
       <td colspan="2">
-        <button  id="btn" (click)="AddBloodBank()">Add</button>
+        <button  id="btn" (click)="AddBloodBank()" onclick="alert('Blood Bank Details Added')" >Add</button>
 </td>
-<td><button><a routerLink="/bloodbankmenu">back</a></button></td>
+
     </tr>
   </table>
 </div>
+
+<footer>
+  <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+</footer>
+

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
+<div id="bg">
 <head>
 </head>
-<body>
+<header>
+  <h1>BLOOD BANK MANAGEMENT SYSTEM</h1>
+</header>
   <body>
     <div class="login-page">
       <div class="form">
@@ -13,13 +16,14 @@
           </div>
         </div>
 
-          <input type="text"  placeholder="username" [(ngModel)]="admin.adminID">
-          <input type="password"  placeholder="password" [(ngModel)]="admin.adminPassword">
-          <button (click)="Validate()">login</button>
+          <input type="text"  placeholder="Username" [(ngModel)]="admin.adminID">
+          <input type="password"  placeholder="Password" [(ngModel)]="admin.adminPassword">
+          <button (click)="Validate()">Login</button>
 
       </div>
     </div>
     <span>{{errMsg}}</span>
+
 </body>
-</body>
+</div>
 </html>

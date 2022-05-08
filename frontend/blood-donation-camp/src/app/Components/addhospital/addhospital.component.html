@@ -1,6 +1,8 @@
 <header><h1>ADD HOSPITAL</h1></header>
-<br>
-
+<div class="topnav">
+  <a routerLink="/hospitalmenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
 <div>
   <table>
 
@@ -32,11 +34,15 @@
     <br>
     <tr>
       <td colspan="2">
-        <button id="btn" (click)="AddHospitalDetails()">Add</button>
+        <button id="btn" (click)="AddHospitalDetails()" onclick="alert('Hospital Added')">Add</button>
       </td>
-      <td><button><a routerLink="/hospitalmenu">back</a></button></td>
+
+
     </tr>
 
   </table>
 </div>
+<footer>
+  <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+</footer>
 

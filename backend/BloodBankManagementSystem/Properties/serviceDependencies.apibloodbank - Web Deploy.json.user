@@ -2,33 +2,33 @@
   "dependencies": {
     "storage1": {
       "restored": true,
-      "restoreTime": "2022-05-02T15:25:16.573863Z"
+      "restoreTime": "2022-05-04T15:44:04.4869967Z"
     },
     "mssql1": {
       "restored": true,
-      "restoreTime": "2022-05-02T15:24:50.8498487Z"
+      "restoreTime": "2022-05-04T15:43:29.1411152Z"
     }
   },
   "parameters": {
     "storage1.resourceGroupName": {
       "Name": "storage1.resourceGroupName",
       "Type": "resourceGroup",
-      "Value": "bloodbank"
+      "Value": "BloodBankManagementResource"
     },
     "storage1.subscriptionId": {
       "Name": "storage1.subscriptionId",
       "Type": "subscription",
-      "Value": "bd97a0dc-203d-49d9-9dbb-eeb31995f584"
+      "Value": "bc81a8e9-8d3a-4ccf-9f4d-d29d0a4ef118"
     },
     "mssql1.subscriptionId": {
       "Name": "mssql1.subscriptionId",
       "Type": "subscription",
-      "Value": "bd97a0dc-203d-49d9-9dbb-eeb31995f584"
+      "Value": "bc81a8e9-8d3a-4ccf-9f4d-d29d0a4ef118"
     },
     "mssql1.resourceGroupName": {
       "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
-      "Value": "bloodbank"
+      "Value": "BloodBankManagementResource"
     }
   }
 }

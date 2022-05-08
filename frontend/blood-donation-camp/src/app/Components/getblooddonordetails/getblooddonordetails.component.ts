@@ -28,7 +28,7 @@ export class GetblooddonordetailsComponent implements OnInit {
   }
   RemoveBloodDonor(id:number){
     this.blooddonorcontrollerservice.RemoveBloodDonor(id).subscribe(response=>{
-
+         this.GetBloodDonorDetails();
 
     })
 

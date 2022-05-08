@@ -10,7 +10,7 @@ export const environment = {
   production: false,
 
 
-api_base:'https://api-bloodbankmanagementsystem.azurewebsites.net/api/'
+api_base:'https://apibloodbank.azurewebsites.net/api/'
   // BloodDonationCamp_api:'https://bloodbankapidheeraj.azurewebsites.net/api/BloodDonationCamp/',
   // hospital_api:'https://api-bloodbankdheer.azurewebsites.net/api/Hospital/',
   // BloodBank_api:'https://bloodbankapidheeraj.azurewebsites.net/api/BloodBank/',

@@ -1,3 +1,10 @@
+<header><h1>VIEW ALL HOSPITALS</h1></header>
+<div class="topnav">
+  <a routerLink="/hospitalmenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
+<br>
+<br>
 <div>
   <table border='1' style="width:50%">
       <tr>
@@ -6,6 +13,7 @@
           <th>Address</th>
           <th>City</th>
           <th>ConatctNo</th>
+          <th>Blood Bank ID</th>
       </tr>
       <tr *ngFor="let item of hospitals">
           <td><input type="text" [(ngModel)]="item.hospitalID" [disabled]="!item.isEditable"/></td>
@@ -26,7 +34,9 @@
 
 
   </table>
-  <button><a routerLink="/hospitalmenu">back</a></button>
-  
+
 </div>
+<footer>
+  <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+</footer>
 

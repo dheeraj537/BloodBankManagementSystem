@@ -10,7 +10,7 @@ namespace BloodBankManagementSystem.Repositories
     public class AdminLoginRepository : IAdminLogin
     {
         private MainContext db;
-            public AdminLoginRepository(MainContext context)
+        public AdminLoginRepository(MainContext context)
         {
             db = context;
         }
@@ -29,7 +29,7 @@ namespace BloodBankManagementSystem.Repositories
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 str = e.Message;
             }

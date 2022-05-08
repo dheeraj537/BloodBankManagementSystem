@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { BloodDonor } from 'src/app/Models/blood-donor';
 import { BloodDonorDonation }from 'src/app/Models/blood-donor-donation';
@@ -21,8 +22,8 @@ export class AddblooddonordonationComponent implements OnInit {
   }
 AddBloodDonorDonation(){
   this.blooddonordonation.bloodDonationDate=new Date();
-  this.blooddonordonation.ExpiryDate=new Date();
-  this.blooddonordonation.ExpiryDate.setDate(this.blooddonordonation.bloodDonationDate.getDate()+42);
+  this.blooddonordonation.expiryDate=new Date();
+  this.blooddonordonation.expiryDate.setDate(this.blooddonordonation.bloodDonationDate.getDate()+42);
 
   this.blooddonorcontrollerservice.AddBloodDonorDonation(this.blooddonordonation).subscribe(res=>{
 

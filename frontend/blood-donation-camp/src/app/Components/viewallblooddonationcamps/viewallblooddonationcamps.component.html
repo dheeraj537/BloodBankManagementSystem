@@ -1,3 +1,10 @@
+<header><h1>VIEW ALL BLOOD DONATION CAMPS</h1></header>
+<div class="topnav">
+  <a routerLink="/blooddonationcampmenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
+<br>
+<br>
 <div>
   <table border="1" style="width:90%">
     <tr>
@@ -18,16 +25,23 @@
       <td><input type="datetime" [(ngModel)]="item.campStartDate" [disabled]="!item.isEditable"/></td>
       <td><input type="datetime" [(ngModel)]="item.campEndDate" [disabled]="!item.isEditable"/></td>
       <td>
-        <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
-        <button *ngIf="item.isEditable" (click)="GetBloodDonationCampStartDate(item.bloodDonationCampID)" (click)="updateblooddonationcamp(item.bloodDonationCampID,item.campName,item.adress,item.city,item.bloodBankID,item.campStartDate,item.campEndDate)">Save</button>
+
+        <button  (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
+        <button *ngIf="item.isEditable" (click)="GetBloodDonationCampStartDate(item.bloodDonationCampID)"(click)="updateblooddonationcamp(item.bloodDonationCampID,item.campName,item.adress,item.city,item.bloodBankID,item.campStartDate,item.campEndDate)">Save</button>
 
 
 
      </td>
-     <td>{{msg}}</td>
+
+
     </tr>
 
 
   </table>
-  <button><a routerLink="/blooddonationcampmenu">back</a></button>
+
+
 </div>
+<footer>
+  
+  <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+</footer>

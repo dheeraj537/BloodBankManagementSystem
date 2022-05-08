@@ -2,7 +2,7 @@
 export const environment = {
   production: false,
 
-  api_base:'https://api-bloodbankmanagementsystem.azurewebsites.net/api/'
+  api_base:'https://apibloodbank.azurewebsites.net/api/'
 
 
 };

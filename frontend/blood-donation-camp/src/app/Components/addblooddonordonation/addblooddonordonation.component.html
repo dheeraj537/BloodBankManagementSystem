@@ -1,51 +1,64 @@
-<header><h1>ADD BLOOD DONOR DONATION</h1></header>
+<header><h1>ADD BLOOD DONOR DONATION DETAILS</h1></header>
+<div class="topnav">
+  <a routerLink="/blooddonormenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
 <br>
 <div>
     <table>
 
-      <!-- <br>
       <tr>
-        <td id="ui">Blood Donation Date</td>
-        <td><input type="date" name="" id="" [(ngModel)]="blooddonordonation.bloodDonationDate"></td>
-      </tr> -->
-      <br>
-      <tr>
-        <td id="bn">Number of Bottles</td>
+        <td id="textele">Number of Bottles</td>
         <td><input type="number" name="" id="" [(ngModel)]="blooddonordonation.numberofBottles"></td>
       </tr>
       <br>
       <tr>
-        <td id="ad">Weight</td>
-        <td><input type="number" name="" id="" [(ngModel)]="blooddonordonation.weight"></td>
+        <td id="textele">Weight</td>
+        <td><input type="number" name="" id="" [(ngModel)]="blooddonordonation.weight">【Ｋｇ】</td>
       </tr>
       <br>
       <tr>
-        <td id="h">HB Count</td>
-        <td><input type="number" name="" id="" [(ngModel)]="blooddonordonation.hbCount"></td>
+        <td id="textele">HB Count</td>
+        <td><input type="number" name="" id="" [(ngModel)]="blooddonordonation.hbCount">【ｇ／ｄｌ】</td>
       </tr>
       <br>
       <tr>
-        <td id="c">Blood Donor id</td>
+        <td id="textele">Blood Donor ID</td>
         <td><input type="number" name="" id="" [(ngModel)]="blooddonordonation.bloodDonorID"></td>
       </tr>
       <br>
       <tr>
-        <td id="mn">Blood Bank ID</td>
+        <td id="textele">Blood Bank ID</td>
         <td><input type="number" name="" id="" [(ngModel)]="blooddonordonation.bloodBankID"></td>
       </tr>
       <br>
       <tr>
-        <td id="bg">Blood Group</td>
-        <td><input type="text" name="" id="" [(ngModel)]="blooddonordonation.bloodGroup"></td>
-      </tr>
-      <br>
+        <td id="textele"><label>Blood Group</label>
+          <td>
+          <select id="z" name="blooddonordonation.bloodGroup"[(ngModel)]="blooddonordonation.bloodGroup" required="">
+            <option value="BloodGroup">Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+
+        </td>
+          </tr>
       <tr>
         <td colspan="2">
-          <button id="btn" (click)="AddBloodDonorDonation()">Add</button>
-
+          <button id="btn" (click)="AddBloodDonorDonation()" onclick="alert('Blood Donor Donation Details Added')" >Add</button>
 
         </td>
       </tr>
     </table>
-    <button><a routerLink="/blooddonormenu">back</a></button>
+
   </div>
+
+  <footer>
+    <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+  </footer>

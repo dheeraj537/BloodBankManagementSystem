@@ -15,7 +15,7 @@ export class BlooddonationcampService {
      return this.http.get<BloodDonationCamp[]>(this.BloodDonationCamp_api+'BloodDonationCamp/GetAllBloodDonationCamps')
    }
    GetBloodDonationCampStartDate(id:number):Observable<Date>{
-     return this.http.get<Date>(this.BloodDonationCamp_api+'BloodDonationCamp/GetAllBloodDonationCampsGetBloodDonationCampStartDate/'+id)
+     return this.http.get<Date>(this.BloodDonationCamp_api+'BloodDonationCamp/GetBloodDonationCampStartDate/'+id)
    }
   AddBloodDonationCamp(item:BloodDonationCamp):Observable<any>{
     return this.http.post(this.BloodDonationCamp_api+'BloodDonationCamp/AddBloodDonationCamp',item);

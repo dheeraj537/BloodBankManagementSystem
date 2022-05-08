@@ -10,6 +10,7 @@ export class ViewallblooddonationcampsComponent implements OnInit
  {
 blooddonationcamps:BloodDonationCamp[]
 blooddonationcamp:BloodDonationCamp;
+
 today:object=new Date();
 usercampdate:Date;
 msg:string;
@@ -18,7 +19,9 @@ msg:string;
     this.blooddonationcamp=new BloodDonationCamp();
     //add GetAllBloodDonationCamps() response to product array
     this.blooddonationcampservice.GetAllBloodDonationCamps().subscribe(response=>{
+
       this.blooddonationcamps=response;
+      console.log(this.blooddonationcamps)
     })
 
       this.GetAllBloodDonationCamps();
@@ -35,7 +38,7 @@ msg:string;
     }
     )}
     updateblooddonationcamp(id:number,name:string,address:string,city:string,bloodbankid:number,startdate:Date,enddate:Date){
-
+      
       if(this.usercampdate>this.today){
 
         this.blooddonationcamp.bloodDonationCampID=id;
@@ -45,16 +48,18 @@ msg:string;
         this.blooddonationcamp.bloodBankID=bloodbankid;
         this.blooddonationcamp.campStartDate=startdate;
         this.blooddonationcamp.campEndDate=enddate;
+
         this.blooddonationcampservice.editBloodDonationCamp(this.blooddonationcamp).subscribe(res=>{
 
+        this.GetAllBloodDonationCamps();
         })
-
       }
+
 
 
     }
     GetBloodDonationCampStartDate(id:number): void{
-      
+
       this.blooddonationcampservice.GetBloodDonationCampStartDate(id).subscribe(res=>{
              this.usercampdate=new Date(res);
 
@@ -64,6 +69,8 @@ msg:string;
       })
 
     }
+
+
 
   }
 

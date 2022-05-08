@@ -85,11 +85,11 @@ namespace BloodBankManagementSystem.Controllers
         //        return BadRequest(ex.Message);
         //    }
         //}
-        [HttpGet]
-        [Route("SearchBlood/{BloodGroup}/{BloodBankID}")]
-        public int SearchBlood(string BloodGroup,int BloodBankID)
+        [HttpPost]
+        [Route("Searchblood")]
+        public int SearchBlood(Searchblood searchblood)
         {
-            return _repository.SearchBlood(BloodGroup,BloodBankID);
+            return _repository.SearchBlood(searchblood);
         }
 
         [HttpGet]

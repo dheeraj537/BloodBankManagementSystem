@@ -6,6 +6,7 @@ import { BloodDonor } from '../Models/blood-donor';
 import { BloodDonorDonation } from 'src/app/Models/blood-donor-donation';
 import { Bloodavailable } from '../Models/bloodavailable';
 import { Transferdetails } from '../Models/transferdetails';
+import { Searchblooddetails } from '../Models/searchblooddetails';
 @Injectable({
   providedIn: 'root'
 })
@@ -38,8 +39,8 @@ export class BlooddonorcontrollerService {
     return this.http.get<BloodDonorDonation[]>(this.blood_donor_api+'BloodDonor/GetBloodInventory')
   }
 
-  SearchBlood(bloodGroup:string,bloodBankID:number):Observable<number>{
-    return this.http.get<number>(this.blood_donor_api+'BloodDonor/SearchBlood/'+bloodGroup+'/'+bloodBankID);
+  SearchBlood(item:Searchblooddetails):Observable<number>{
+    return this.http.post<number>(this.blood_donor_api+'BloodDonor/SearchBlood/',item);
   }
   DeleteExpiredBlood(id:number):Observable<any>
   {

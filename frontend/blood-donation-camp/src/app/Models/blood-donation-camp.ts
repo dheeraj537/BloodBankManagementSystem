@@ -7,4 +7,5 @@ export class BloodDonationCamp {
   campStartDate:Date;
   campEndDate:Date;
   isEditable:boolean;
+  todaydate:Date=new Date();
 }

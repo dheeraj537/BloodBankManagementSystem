@@ -107,9 +107,11 @@ namespace BloodBankManagementSystem.Repositories
             throw new NotImplementedException();
         }
 
-        public int SearchBlood(string BloodGroup, int BloodBankID)
+        public int SearchBlood(Searchblood searchblood)
+
         {
-            return _context.BloodDonorDonations.Where(x => x.BloodGroup == BloodGroup && x.BloodBankID==BloodBankID).Select(x=>x.NumberofBottles).Sum();
+
+            return _context.BloodDonorDonations.Where(x => x.BloodGroup == searchblood.BloodGroup && x.BloodBankID==searchblood.BloodBankID).Select(x=>x.NumberofBottles).Sum();
 
 
 

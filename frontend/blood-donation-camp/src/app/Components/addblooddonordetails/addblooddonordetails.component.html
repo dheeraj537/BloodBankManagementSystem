@@ -1,4 +1,9 @@
-<header><h1>Add Blood Donor</h1></header>
+<header><h1>ADD BLOOD DONOR</h1></header>
+<div class="topnav">
+  <a routerLink="/blooddonormenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
+<br>
 <div>
     <table>
 
@@ -6,34 +11,54 @@
         <td id="textele">Name</td>
         <td><input type="text" name="" id="" [(ngModel)]="blooddonor.firstName"></td>
       </tr>
+      <br>
       <tr>
         <td id="textele">Last Name</td>
         <td><input type="text" name="" id="" [(ngModel)]="blooddonor.lastName"></td>
       </tr>
+      <br>
       <tr>
         <td id="textele">Address</td>
         <td><input type="text" name="" id="" [(ngModel)]="blooddonor.address"></td>
       </tr>
+      <br>
       <tr>
         <td id="textele">City</td>
         <td><input type="text" name="" id="" [(ngModel)]="blooddonor.city"></td>
       </tr>
+      <br>
       <tr>
-        <td id="textele">Mobile No</td>
+        <td id="textele">Mobile Number</td>
         <td><input type="number" name="" id="" [(ngModel)]="blooddonor.mobileNo"></td>
       </tr>
+      <br>
       <tr>
-        <td id="textele">blood group</td>
-        <td><input type="text" name="" id="" [(ngModel)]="blooddonor.bloodGroup"></td>
-      </tr>
+      <td id="bg" [(ngModel)]="blooddonor.bloodGroup">Blood Group</td>
+        <select id="z">
+          <option value="BloodGroup">Select Blood Group</option>
+          <option value="A+">A+ve</option>
+          <option value="A-">A-ve</option>
+          <option value="B+">B+ve</option>
+          <option value="B-">B-ve</option>
+          <option value="O+">O+ve</option>
+          <option value="O-">O-ve</option>
+          <option value="AB+">AB+ve</option>
+          <option value="AB-">AB-ve</option>
+        </select>
+        </tr>
       <tr>
         <td colspan="2">
-          <button id="btn" (click)="Addblooddonor()">Add</button>
-
+          <button id="btn" (click)="Addblooddonor()" onclick="alert('Blood Donor Details Added')">Add</button>
 
         </td>
       </tr>
 
-    </table>
-    <button><a routerLink="/blooddonormenu">back</a></button>
+
+
+      </table>
+
   </div>
+
+  <footer>
+    <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+  </footer>

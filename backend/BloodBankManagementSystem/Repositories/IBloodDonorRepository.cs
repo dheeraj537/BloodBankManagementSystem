@@ -18,7 +18,7 @@ namespace BloodBankManagementSystem.Repositories
 
         
         List<BloodDonorDonation> GetBloodInventory();
-        int SearchBlood(string BloodGroup,int BloodBankID);
+        int SearchBlood(Searchblood searchblood);
         void DeleteExpiredBlood(int BloodDonationID);
         List<ViewBloodAvailable> ViewBloodAvailable();
        

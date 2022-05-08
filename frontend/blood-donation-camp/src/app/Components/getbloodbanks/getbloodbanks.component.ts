@@ -36,12 +36,13 @@ bloodbank:BloodBank;
     this.bloodbank.city=city;
     this.bloodbank.contactNumber=mobile;
     this.bloodbankserviceservice.UpdateBloodBank(this.bloodbank).subscribe(res=>{
+      this.GetBloodBanks();
 
     })
   }
   Deletebloodbank(id:number){
     this.bloodbankserviceservice.DeleteBloodBank(id).subscribe(res=>{
-      
+      this.GetBloodBanks();
     })
   }
 

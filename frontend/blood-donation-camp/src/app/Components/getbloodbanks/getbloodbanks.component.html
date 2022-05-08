@@ -1,5 +1,17 @@
-<div >
-  <table border='1' style="width:80%">
+
+
+<header><h1>VIEW ALL BLOOD BANKS</h1></header>
+
+
+<div class="topnav">
+  <a routerLink="/bloodbankmenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
+<br>
+<br>
+<div class="divScroll">
+  <table border='1' style="width:50%">
+
       <tr>
         <th>Blood Bank Id</th>
 
@@ -22,13 +34,17 @@
           <button (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
           <button *ngIf="item.isEditable" (click)="updatebloodbank(item.bloodBankID,item.bloodBankName,item.address,item.city,item.contactNumber)">Save</button>
 
-
        </td>
 
 
-      </tr>
+    </tr>
 
   </table>
-  <button><a routerLink="/bloodbankmenu">back</a></button>
-  <button><a routerLink="/viewbloodbanks">back</a></button>
 </div>
+
+
+<footer>
+  <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+</footer>
+
+

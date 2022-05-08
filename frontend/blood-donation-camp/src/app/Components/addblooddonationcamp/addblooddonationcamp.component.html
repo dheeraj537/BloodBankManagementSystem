@@ -1,4 +1,8 @@
-<header><h1> Add Blood Donation Camp Details </h1></header>
+<header><h1>ADD BLOOD DONATION CAMP DETAILS</h1></header>
+<div class="topnav">
+  <a routerLink="/blooddonationcampmenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
 <div>
   <table>
 
@@ -34,10 +38,16 @@
     </tr>
     <tr>
       <td colspan="2">
-        <button id="btn" (click)="AddBloodDonationCamp()">AddBloodDonationCamp</button>
+        <button id="btn" (click)="AddBloodDonationCamp()" onclick="alert('Blood Donation Camp Details Added')" >Add</button>
       </td>
     </tr>
 
   </table>
-  <button><a routerLink="/blooddonationcampmenu">back</a></button>
+
 </div>
+
+<footer>
+  <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+</footer>
+
+

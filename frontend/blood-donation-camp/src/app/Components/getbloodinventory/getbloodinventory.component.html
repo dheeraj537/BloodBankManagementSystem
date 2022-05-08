@@ -1,4 +1,12 @@
+<header><h1>VIEW BLOOD DONATIONS</h1></header>
+<div class="topnav">
+  <a routerLink="/blooddonormenu">Back</a>
+ <a id="logout" routerLink="/">Logout</a>
+</div>
+<br>
+<br>
 <div>
+
   <table border='1' style="width:50%">
       <tr>
           <th>BloodBankID</th>
@@ -13,16 +21,15 @@
           <td>{{item.bloodGroup}}</td>
           <td>{{item.numberofBottles}}</td>
           <td>{{item.bloodDonationDate}}</td>
-          <td>{{result1}}</td>
-          <td><button (click)="DeleteExpiredBlood(item.bloodDonationID)">Delete</button></td>
+          <td>{{item.expiryDate}}</td>
 
-
-
+          <td><button (click)="DeleteExpiredBlood(item.bloodDonationID)" onclick="alert('Blood Donation Deleted')">Delete</button></td>
 
       </tr>
 
-
   </table>
-  <button><a routerLink="/blooddonormenu">back</a></button>
-  <button><a routerLink="/viewbloodinventory">Refresh</a></button>
 </div>
+<footer>
+    <h4>COPYRIGHT © 2022<br>Blood Bank Management<br>ALL RIGHTS RESERVED.</h4>
+  </footer>
+

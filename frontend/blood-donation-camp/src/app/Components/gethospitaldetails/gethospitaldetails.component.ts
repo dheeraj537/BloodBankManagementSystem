@@ -38,13 +38,15 @@ export class GethospitaldetailsComponent implements OnInit {
 
 
     this.hospitalcontrollerservice.RemoveHospitalDetails(id).subscribe(response=>{
-      this.router.navigate['/viewhospital'];
-      this.ngOnInit();
+      // this.router.navigate['/viewhospital'];
+      // this.ngOnInit();
 
+      this.GetHospitalDetails();
 
 
 
     })
+
 
 
   }
@@ -57,6 +59,7 @@ export class GethospitaldetailsComponent implements OnInit {
     this.hospital.bloodBankID=bloodbank;
 
     this.hospitalcontrollerservice.updatehospital(this.hospital).subscribe(res=>{
+      this.GetHospitalDetails();
 
 
     })

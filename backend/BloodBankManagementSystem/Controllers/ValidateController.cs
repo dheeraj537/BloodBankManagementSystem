@@ -15,7 +15,7 @@ namespace BloodBankManagementSystem.Controllers
     {
         private IAdminLogin _repository = null;
 
-       
+
         public ValidateController(IAdminLogin admin)
         {
             _repository = admin;
@@ -26,7 +26,7 @@ namespace BloodBankManagementSystem.Controllers
         {
             try
             {
-                 Admin admins = _repository.Validate(admin);
+                Admin admins = _repository.Validate(admin);
                 if (admins == null) return NotFound();
                 return Ok(admins);
             }
